@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+  int N ,marks;
+  int total=0,averagescore=0,failedsubject=0;
+  scanf("%d",&N);
+  
+    
+    for( int i=0;i<N;i++){
+        scanf("%d",&marks);
+        total+=marks;
+        
+    }
+    
+printf("average score:%d\n",total);
+printf("failed subject:%d",failedsubject);
+    
+    return 0;
+}
+
