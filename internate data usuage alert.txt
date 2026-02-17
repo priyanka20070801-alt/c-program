@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+  int N,high_usagedata;
+  int total=0;
+  scanf("%d",&N);
+  
+    
+    for( int i=0;i<N;i++){
+        scanf("%d",&high_usagedata);
+        total+=high_usagedata;
+        
+    }
+    
+printf("total data:%d\n",total);
+printf("high_usagedata:%d",high_usagedata);
+    
+    return 0;
+}
