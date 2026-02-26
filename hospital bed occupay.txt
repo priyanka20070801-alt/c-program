@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    int capacity;
+
+    scanf("%d", &N);
+    scanf("%d", &capacity);
+
+    int changes[N];
+
+    for(int i = 0; i < N; i++){
+        scanf("%d", &changes[i]);
+    }
+
+    int occupied = 0;
+    int criticalcount = 0;
+    int threshold = (capacity * 90) / 100;
+
+    for(int i = 0; i < N; i++){
+        int previous = occupied;
+        occupied += changes[i];
+        if(previous <= threshold && occupied > threshold){
+            criticalcount++;
+        }
+    }
+
+    printf("final occupied bed: %d\n", occupied);
+    printf("critical count: %d", criticalcount);
+
+    return 0;
+}
